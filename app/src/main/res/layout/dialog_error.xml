@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="251dp"
+    android:layout_height="211dp">
+
+    <TextView
+        android:id="@+id/text_view_subtitle_point"
+        android:layout_width="179dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginRight="57dp"
+        android:gravity="center"
+        android:text="@string/account_error"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_dialog_chooser_yes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_dialog_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_coner"
+        android:text="@string/ok_error"
+        android:textColor="@color/colorText"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
