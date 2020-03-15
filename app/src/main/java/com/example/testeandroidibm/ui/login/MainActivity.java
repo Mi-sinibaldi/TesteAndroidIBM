@@ -20,7 +20,7 @@ import com.example.testeandroidibm.data.model.LoginRequest;
 import com.example.testeandroidibm.data.model.LoginResponse;
 import com.example.testeandroidibm.ui.account.AccountActivity;
 
-public class MainActivity extends AppCompatActivity implements LoginContract.LoginView{
+public class MainActivity extends AppCompatActivity implements LoginContract.LoginView {
 
     private Button btnLogin;
     private TextView textUser;
@@ -54,12 +54,11 @@ public class MainActivity extends AppCompatActivity implements LoginContract.Log
 
         btnLogin = findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(v -> {
-            if (presenter.validPasswordData(textPassword.getText().toString())) ;
-            {
+            if (presenter.validPasswordData(textPassword.getText().toString())) {
                 LoginRequest loginRequest = new LoginRequest(textUser.getText().toString(), textPassword.getText().toString());
                 presenter.login(loginRequest);
             }
-            //showProgress(true);
+            showProgress(true);
 
         });
 
@@ -70,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements LoginContract.Log
             textUser.setText(user);
 
         } else {
-            textUser.setText("User");
+            textUser.setText("");
         }
 
         LoginContract.LoginPresenter presenter = new LoginPresenter(this);
@@ -123,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements LoginContract.Log
     public void showError() {
         Toast.makeText(getApplicationContext(), "Verifique os dados e tente novamente!",
                 Toast.LENGTH_LONG).show();
-        }
+    }
 
     @Override
     public void navigateToList(LoginResponse loginResponse) {
